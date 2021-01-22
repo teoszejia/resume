@@ -1,0 +1,358 @@
+:root{
+    --yellowColor:#ede8de;
+    --lightColor:#f7f7f5;
+    --whiteColor:#ffffff;
+    --darkYellow:#e6d7a8;
+
+    --highlightColor:#f9d55d;
+
+    --borderColor:#d7d2c8;
+
+    --mainText:black;
+    --secondaryText:#4b5156;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5{
+    color: var(--mainText);
+    font-family: 'Playfair Display', serif;
+}
+
+
+h6{
+    color: var(--mainText);
+    font-family: 'Roboto', sans-serif;
+}
+
+h7{
+    color: var(--secondaryText);
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight:500;
+}
+
+p, li, span, label, input, textarea{
+    color: var(--secondaryText);
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight:300;
+}
+
+mark {
+  background-color: var(--highlightColor);
+  color: black;
+}
+
+a{
+    text-decoration: none;
+    color:#17a2b8;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 36px;}
+h3 {font-size: 25px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 14px;}
+
+.s1{
+    background-color: var(--whiteColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--yellowColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s3{
+    background-color: var(--yellowColor);
+    overflow: auto;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+
+    justify-content: center;
+    align-content: center;
+
+    min-height: 8em;
+}
+
+/* About Me (navigation bar + window) */
+.intro-wrapper{
+    background-color: var(--whiteColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em auto;
+	grid-template-areas:
+	    'nav-wrapper nav-wrapper'
+	    'window-wrapper window-wrapper'
+	;
+}
+
+/* Navigation bar icons */
+#icons{
+    height: 12px;
+    width: 120px;
+    object-fit: contain;
+}
+
+/* Notebook image */
+.notebook{
+    width: 100%;
+    display: block;
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--yellowColor);
+}
+
+.window-wrapper{
+    grid-area: window-wrapper;
+    background-color: var(--whiteColor);
+}
+
+/* About Me text */
+#windowTitle{
+    margin: 0;
+    padding: 10px;
+}
+
+.myImage {
+    position: relative;
+    padding-top: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+/*
+.innerHover {
+    position: absolute;
+    width: 21%;
+    height: 15%;
+    border: 1px solid coral;
+    top: 42%;
+    right: 8%;
+}
+*/
+
+.overlayImage{
+    width: 100%;
+    display: block;
+    padding-top: 30px;
+}
+
+.doodles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+/*
+.innerHover .doodles{
+   display:none;
+}
+*/
+
+/* hover */
+.doodles:hover{
+    display: block;
+    opacity: 1;
+}
+
+#profile{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 15px;
+}
+
+.basic-wrapper{
+    background-color: var(--lightColor);
+    width: 95%;
+    margin: 10px auto 10px auto;
+    display: flex;
+    border: 1px solid var(--borderColor);
+}
+
+.right-column{
+    margin: 20px 20px auto auto;
+}
+
+.title-wrapper{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'title-left title-right'
+}
+
+.title-left{
+    grid-area:title-left;
+    padding-left: 10px;
+}
+
+.title-right{
+    grid-area:title-right;
+    padding-left: 10px;
+}
+
+.skills-wrapper{
+    width: 95%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'skills-left skills-right'
+}
+
+.skills-left{
+    grid-area:skills-left;
+    padding:15px;
+    background-color:var(--lightColor);
+    border-right:3px solid var(--borderColor);
+}
+
+.skills-right{
+    grid-area:skills-right;
+    padding: 15px;
+}
+
+.learn-photo{
+    width:100%;
+}
+
+#learn{
+    display:block;
+    width:90%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Yellow box behind the titles and bars */
+.skills-bar{
+    background-color:var(--lightColor);
+    padding:12px;
+}
+
+.skills-bar .bar{
+    margin:10px;
+}
+
+.skills-bar .bar .progress-line{
+    position:relative;
+    height:15px;
+    width:100%;
+    background:#f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px rgba(255,255,255,0.8);
+
+    transform: scaleX(0);
+    transform-origin:left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span{
+    height:100%;
+    border-radius: 10px;
+    background-color:var(--darkYellow);
+    position:absolute;
+    transform: scaleX(0);
+    transform-origin:left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform:scaleX(1);
+    }
+}
+
+/* Design */
+.progress-line.photo span{
+    width:80%;
+}
+.progress-line.ill span{
+    width:75%;
+}
+.progress-line.blender span{
+    width:45%;
+}
+.progress-line.clip span{
+    width:75%;
+}
+
+/* Prototyping */
+.progress-line.print span{
+    width:60%;
+}
+.progress-line.elec span{
+    width:40%;
+}
+.progress-line.laser span{
+    width:60%;
+}
+.progress-line.SW span{
+    width:70%;
+}
+
+/* Coding */
+.progress-line.ard span{
+    width:30%;
+}
+.progress-line.css span{
+    width:10%;
+}
+.progress-line.html span{
+    width:15%;
+}
+.progress-line.python span{
+    width:65%;
+}
+
+/* ?? */
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+}
